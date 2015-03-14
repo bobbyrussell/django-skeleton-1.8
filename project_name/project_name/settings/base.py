@@ -60,6 +60,10 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
+LOCAL_APPS = (
+    'pipeline',
+)
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -85,6 +89,10 @@ DATABASES = {
     }
 }
 
+FIXTURE_DIRS = (
+    os.path.join(SITE_ROOT, 'fixtures'),
+)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -104,15 +112,32 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(DJANGO_ROOT, 'static')
 STATICFILES_DIRS = (
-    os.path.join(DJANGO_ROOT, 'static'),
+    os.path.join(DJANGO_ROOT, 'assets'),
 )
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
 )
 
-FIXTURE_DIRS = (
-    os.path.join(SITE_ROOT, 'fixtures'),
-)
+PIPELINE_CSS = {
+    'libraries': {
+        'source_filenames':
+            ('bower_components/bootstrap/dist/css/bootstrap.css',
+             'css/{{ project_name }}.css',),
+        'output_filename': 'css/libs.min.css',
+    }
+}
+
+PIPELINE_JS = {
+    'libraries': {
+        'source_filenames':
+            ('bower_components/jquery/dist/jquery.js',),
+        'output_filename': 'js/libs.min.js',
+    }
+}

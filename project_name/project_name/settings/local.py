@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = True
 
-LOCAL_APPS = (
+LOCAL_APPS += (
     'debug_toolbar',
 )
 
