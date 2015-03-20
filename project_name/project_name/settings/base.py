@@ -1,5 +1,5 @@
 """
-Django settings for {{ project_name|title }} Project.
+Base settings for {{ project_name|title }} Project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -46,10 +46,10 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 )
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
+
+ALLOWED_HOSTS = []
 
 DJANGO_APPS = (
     'django.contrib.admin',
