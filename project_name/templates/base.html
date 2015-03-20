@@ -48,12 +48,13 @@
       <h1>{% templatetag openblock %} block page_title {% templatetag closeblock %}Example Base Template{% templatetag openblock %} endblock page_title {% templatetag closeblock %}</h1>
 
       {% templatetag openblock %} block content {% templatetag closeblock %}
-        <p>Use this document as a way to quick start any new project.</p>
+        <p class="lead">Hello world!</p>
       {% templatetag openblock %} endblock content {% templatetag closeblock %}
 
     </div> <!-- /container -->
     {% templatetag openblock %} load staticfiles pipeline {% templatetag closeblock %}
     {% templatetag openblock %} stylesheet 'libraries' {% templatetag closeblock %}
+    {% templatetag openblock %} stylesheet 'custom' {% templatetag closeblock %}
     {% templatetag openblock %} javascript 'libraries' {% templatetag closeblock %}
     {% templatetag openblock %} block extra_js {% templatetag closeblock %}
     {% templatetag openblock %} endblock extra_js {% templatetag closeblock %}
