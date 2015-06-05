@@ -1,11 +1,11 @@
 #{{ project_name|title }}
 ## About
-This is a very simple django 1.7 skeleton project. The project structure was
+This is a very simple django 1.8 skeleton project. The project structure was
 influenced by [Two Scoops](http://twoscoopspress.org/), which, sadly, is no
 longer being revised for versions of Django beyond 1.6.
 ## Requirements
 * Bower
-* Django 1.7
+* Django 1.8
 
 [Bower](http://bower.io/) allows us to manage our jQuery and Bootstrap assets
 easily. We need Django installed in order to use `django-admin.py` to build a
@@ -17,7 +17,7 @@ project from the template.
         . env/bin/activate
         pip install django
         django-admin.py startproject \
-            --template=https://github.com/bobbyrussell/django-skeleton-1.7/archive/master.zip \
+            --template=https://github.com/bobbyrussell/django-skeleton-1.8/archive/master.zip \
             --extension=py,md,html,json,.bowerrc <project name>
         cd <project name>
         pip install -r requirements/base.txt
