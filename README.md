@@ -3,6 +3,10 @@
 This is a very simple django 1.8 skeleton project. The project structure was
 influenced by [Two Scoops](http://twoscoopspress.org/), which, sadly, is no
 longer being revised for versions of Django beyond 1.6.
+
+Django Skeleton 1.8 is a fork of my [Django Skeleton
+1.7](https://github.com/bobbyrussell/django-skeleton-1.7) project.
+
 ## Requirements
 * Bower
 * Django 1.8
@@ -29,7 +33,7 @@ project from the template.
 in the `env` directory, and `. env/bin/activate` sources the virtualenv into
 the current shell. `pip install django` will then install django to your
 virtualenv. `django-admin.py` is then used to create a project from the
-django-skeleton-1.7 template.
+django-skeleton-1.8 template.
 
 `cd` into the project's working directory and `pip install -r requirements/base.txt` 
 the rest of the python requirements into the virtualenv. `bower install` will 
